@@ -34,7 +34,7 @@ Let's connect and collaborate!`,
   avatar: "https://cdn.srb.codes/images/characters/ghibli-style-pfp.PNG",
   avatar_happy:
     "https://cdn.srb.codes/images/characters/ghibli-style-happy-pfp.PNG",
-  ogImage: "https://assets.chanhdai.com/images/screenshot-og-image-light.png",
+  ogImage: "https://cdn.srb.codes/images/srbcode-og.png",
   namePronunciationUrl: "",
   keywords: [
     "Sourabh Soni",
