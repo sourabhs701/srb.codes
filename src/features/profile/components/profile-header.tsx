@@ -11,7 +11,7 @@ import { VerifiedIcon } from "./verified-icon";
 
 export function ProfileHeader() {
   const { resolvedTheme } = useTheme();
-  const avatarSrc = resolvedTheme === "dark" ? USER.avatar : USER.avatar_happy;
+  const avatarSrc = resolvedTheme === "light" ? USER.avatar_happy : USER.avatar;
 
   return (
     <div className="screen-line-after flex border-x border-edge">
