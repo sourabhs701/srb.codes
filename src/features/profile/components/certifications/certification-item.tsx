@@ -24,16 +24,41 @@ export function CertificationItem({
       rel="noopener"
     >
       {certification.issuerLogoURL ? (
-        <Image
-          src={certification.issuerLogoURL}
-          alt={certification.issuer}
-          width={32}
-          height={32}
-          quality={100}
-          className="mx-4 flex size-6 shrink-0 select-none"
-          unoptimized
-          aria-hidden
-        />
+        certification.theme ? (
+          <>
+            <Image
+              src={`https://cdn.srb.codes/images/companies/${certification.issuer}-light.svg`}
+              alt={`${certification.issuer} light logo`}
+              width={32}
+              height={32}
+              quality={100}
+              className="mx-4 hidden size-6 shrink-0 select-none [html.light_&]:flex"
+              unoptimized
+              aria-hidden
+            />
+            <Image
+              src={`https://cdn.srb.codes/images/companies/${certification.issuer}-dark.svg`}
+              alt={`${certification.issuer} dark logo`}
+              width={32}
+              height={32}
+              quality={100}
+              className="mx-4 hidden size-6 shrink-0 select-none [html.dark_&]:flex"
+              unoptimized
+              aria-hidden
+            />
+          </>
+        ) : (
+          <Image
+            src={`https://cdn.srb.codes/images/companies/${certification.issuer}.svg`}
+            alt={certification.issuer}
+            width={32}
+            height={32}
+            quality={100}
+            className="mx-4 flex size-6 shrink-0 select-none"
+            unoptimized
+            aria-hidden
+          />
+        )
       ) : (
         <div
           className="mx-4 flex size-6 shrink-0 items-center justify-center select-none [&_svg]:size-5 [&_svg]:text-muted-foreground"

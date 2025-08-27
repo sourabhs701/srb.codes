@@ -1,17 +1,9 @@
 "use client";
-
 import { motion, useMotionValueEvent, useScroll } from "motion/react";
-import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 
-import { ChanhDaiMark } from "./chanhdai-mark";
-
-export function SiteHeaderMark() {
-  const pathname = usePathname();
-  return pathname === "/" ? <ChanhDaiMarkMotion /> : <ChanhDaiMark />;
-}
-
-function ChanhDaiMarkMotion() {
+import { SVGLetter } from "./SvgLetter";
+export const SiteHeaderMark = () => {
   const { scrollY } = useScroll();
   const [visible, setVisible] = useState(false);
   const distanceRef = useRef(160);
@@ -36,10 +28,44 @@ function ChanhDaiMarkMotion() {
     };
   }, []);
 
+  const letterS = [
+    [0, 1, 1, 1, 1, 1, 0, 0],
+    [1, 0, 0, 0, 0, 0, 1, 0],
+    [1, 0, 0, 0, 0, 0, 0, 0],
+    [0, 1, 1, 1, 1, 1, 0, 0],
+    [0, 0, 0, 0, 0, 0, 1, 0],
+    [1, 0, 0, 0, 0, 0, 1, 0],
+    [0, 1, 1, 1, 1, 1, 0, 0],
+  ];
+
+  const letterR = [
+    [0, 1, 1, 1, 1, 1, 0, 0],
+    [1, 0, 0, 0, 0, 0, 1, 0],
+    [1, 0, 0, 0, 0, 0, 1, 0],
+    [1, 1, 1, 1, 1, 1, 0, 0],
+    [1, 0, 0, 1, 0, 0, 0, 0],
+    [1, 0, 0, 0, 1, 0, 0, 0],
+    [1, 0, 0, 0, 0, 1, 0, 0],
+  ];
+
+  const letterB = [
+    [0, 1, 1, 1, 1, 1, 0, 0],
+    [1, 0, 0, 0, 0, 0, 1, 0],
+    [1, 0, 0, 0, 0, 0, 1, 0],
+    [1, 1, 1, 1, 1, 1, 0, 0],
+    [1, 0, 0, 0, 0, 0, 1, 0],
+    [1, 0, 0, 0, 0, 0, 1, 0],
+    [1, 1, 1, 1, 1, 1, 0, 0],
+  ];
+
+  const letterWidth = 80;
+  const letterSpacing = -80;
   return (
     <motion.svg
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 512 256"
+      width={letterWidth * 2 + letterSpacing}
+      height={letterWidth}
+      viewBox={`0 0 ${letterWidth * 3 + letterSpacing * 2} ${letterWidth}`}
       initial={{
         opacity: 0,
         transform: "translateY(8px)",
@@ -50,13 +76,16 @@ function ChanhDaiMarkMotion() {
       }}
       transition={{ duration: 0.3 }}
     >
-      <path
-        d="M192 256H64v-64h128v64ZM448 64H320v128h128v64H256V0h192v64ZM64 192H0V64h64v128ZM512 192h-64V64h64v128ZM192 64H64V0h128v64Z"
-        fill="currentColor"
+      <SVGLetter pattern={letterS} x={0} y={0} />
+      <SVGLetter pattern={letterR} x={letterWidth + letterSpacing} y={0} />
+      <SVGLetter
+        pattern={letterB}
+        x={(letterWidth + letterSpacing) * 2}
+        y={0}
       />
     </motion.svg>
   );
-}
+};
 
 const calcDistance = (el: HTMLElement) => {
   const rect = el.getBoundingClientRect();

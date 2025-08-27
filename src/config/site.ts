@@ -16,24 +16,25 @@ export const META_THEME_COLORS = {
 
 export const MAIN_NAV: NavItem[] = [
   {
-    title: "Daifolio",
+    title: "Home",
     href: "/",
   },
-  {
-    title: "Blog",
-    href: "/blog",
-  },
-  {
-    title: "Components",
-    href: "/components",
-  },
+  // {
+  //   title: "Blog",
+  //   href: "/blog",
+  // },
+  // {
+  //   title: "Components",
+  //   href: "/components",
+  // },
 ];
 
-export const SOURCE_CODE_GITHUB_REPO = "ncdai/chanhdai.com";
-export const SOURCE_CODE_GITHUB_URL = "https://github.com/ncdai/chanhdai.com";
+export const SOURCE_CODE_GITHUB_REPO = "sourabhs701/srb.codes";
+export const SOURCE_CODE_GITHUB_URL =
+  "https://github.com/sourabhs701/srb.codes";
 
 export const UTM_PARAMS = {
-  utm_source: "chanhdai.com",
+  utm_source: "srb.codes",
   utm_medium: "portfolio_website",
   utm_campaign: "referral",
 };

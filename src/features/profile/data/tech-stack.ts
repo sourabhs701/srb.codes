@@ -44,6 +44,7 @@ export const TECH_STACK: TechStack[] = [
     title: "Rust",
     href: "https://www.rust-lang.org/",
     categories: ["Language"],
+    theme: true,
   },
   //Frameworks
   {
@@ -51,7 +52,7 @@ export const TECH_STACK: TechStack[] = [
     title: "Next.js",
     href: "https://nextjs.org/",
     categories: ["Framework"],
-    // theme: true,
+    theme: true,
   },
   {
     key: "ror",
@@ -64,6 +65,7 @@ export const TECH_STACK: TechStack[] = [
     title: "Express",
     href: "https://expressjs.com/",
     categories: ["Framework"],
+    theme: true,
   },
   {
     key: "fastapi",
@@ -115,7 +117,7 @@ export const TECH_STACK: TechStack[] = [
     title: "shadcn/ui",
     href: "https://ui.shadcn.com/",
     categories: ["Library", "Component Library"],
-    // theme: true,
+    theme: true,
   },
   {
     key: "tailwind",
@@ -128,6 +130,7 @@ export const TECH_STACK: TechStack[] = [
     title: "Socket-io",
     href: "https://socket.io/",
     categories: ["Tools"],
+    theme: true,
   },
   {
     key: "tensor",
@@ -154,6 +157,7 @@ export const TECH_STACK: TechStack[] = [
     title: "GitHub",
     href: "https://github.com/",
     categories: ["Version Control"],
+    theme: true,
   },
 
   {
@@ -176,6 +180,7 @@ export const TECH_STACK: TechStack[] = [
     title: "AWS",
     href: "https://aws.amazon.com/",
     categories: ["Cloud"],
+    theme: true,
   },
   {
     key: "cfw",
