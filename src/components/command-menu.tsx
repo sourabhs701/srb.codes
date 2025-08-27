@@ -16,8 +16,8 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useTheme } from "next-themes";
 import React, { useCallback, useEffect, useMemo, useState } from "react";
-import { toast } from "sonner";
 
+// import { toast } from "sonner";
 import {
   CommandDialog,
   CommandEmpty,
@@ -30,8 +30,8 @@ import {
 import type { Post } from "@/features/blog/types/post";
 import { SOCIAL_LINKS } from "@/features/profile/data/social-links";
 import { cn } from "@/lib/utils";
-import { copyText } from "@/utils/copy";
 
+// import { copyText } from "@/utils/copy";
 import { Icons } from "./icons";
 import { Button } from "./ui/button";
 import { Separator } from "./ui/separator";
@@ -111,7 +111,7 @@ const SOCIAL_LINK_ITEMS: CommandLinkItem[] = SOCIAL_LINKS.map((item) => ({
 export function CommandMenu({ posts }: { posts: Post[] }) {
   const router = useRouter();
 
-  const { setTheme, resolvedTheme } = useTheme();
+  const { setTheme } = useTheme();
 
   const [open, setOpen] = useState(false);
 
@@ -155,11 +155,11 @@ export function CommandMenu({ posts }: { posts: Post[] }) {
     [router]
   );
 
-  const handleCopyText = useCallback((text: string, message: string) => {
-    setOpen(false);
-    copyText(text);
-    toast.success(message);
-  }, []);
+  // const handleCopyText = useCallback((text: string, message: string) => {
+  //   setOpen(false);
+  //   copyText(text);
+  //   toast.success(message);
+  // }, []);
 
   const handleThemeChange = useCallback(
     (theme: "light" | "dark" | "system") => {

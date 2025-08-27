@@ -1,10 +1,10 @@
-import { ArrowRightIcon } from "lucide-react";
-import dynamic from "next/dynamic";
-import Link from "next/link";
+// import { ArrowRightIcon } from "lucide-react";
+// import dynamic from "next/dynamic";
+// import Link from "next/link";
 
-import { ChanhDaiWordmark } from "@/components/chanhdai-wordmark";
+// import { Button } from "@/components/ui/button";
+// import { ChanhDaiWordmark } from "@/components/chanhdai-wordmark";
 import { SrbMark } from "@/components/srb-mark";
-import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 import { Panel, PanelHeader, PanelTitle } from "./panel";

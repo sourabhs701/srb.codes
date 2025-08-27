@@ -9,9 +9,9 @@ import { cn } from "@/lib/utils";
 import { SiteHeaderWrapper } from "./site-header-wrapper";
 import { ToggleTheme } from "./toggle-theme";
 
-const CommandMenu = dynamic(() =>
-  import("@/components/command-menu").then((mod) => mod.CommandMenu)
-);
+// const CommandMenu = dynamic(() =>
+//   import("@/components/command-menu").then((mod) => mod.CommandMenu)
+// );
 
 const MobileNav = dynamic(() =>
   import("@/components/mobile-nav").then((mod) => mod.MobileNav)
