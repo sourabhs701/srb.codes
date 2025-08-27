@@ -14,28 +14,24 @@ export const USER: User = {
     "Creating with code. Small details matter.",
   ],
   address: "Jaipur, Rajasthan, India",
-  phoneNumber: "KzgxMDc2NTU3Mzc=", // base64 encoded
-  email: "c291cmFiaHM3MDFAZ21haWwuY29t", // base64 encoded
+  phoneNumber: "KzgxMDc2NTU3Mzc=",
+  email: "c291cmFiaHM3MDFAZ21haWwuY29t",
   website: "https://srb.codes",
-  jobTitle: "Full-Stack & Generative AI Engineer",
+  jobTitle: "Engineer",
   jobs: [
     {
-      title: "Full Stack Engineer Intern",
-      company: "Vedhin",
-      website: "https://vedhin.com",
+      title: "Gen AI Engineer Intern",
+      company: "Datamonk",
+      website: "https://learn.datamonk.dev",
     },
   ],
   about: `
-Hello, World! I am Chánh Đại — a Design Engineer passionate about creating high-performance, user-centric software solutions with intuitive and engaging designs.
+I’m Sourabh Soni, a Full-Stack & Generative AI Engineer crafting scalable, cloud-native applications and intelligent systems powered by LLMs. My work spans from blockchain-based payment flows to distributed video streaming pipelines and self-hosted deployment platforms, blending system design, automation, and applied AI to solve real problems.
 
-With 5+ years of experience, I specialize in building high-quality web and mobile applications using Next.js, React, TypeScript, and modern front-end technologies. Beyond work, I love exploring new technologies and turning ideas into reality through personal projects.
-
-One of my key projects, [ZaDark](https://zadark.com), enhances the Zalo experience on PC and Web, surpassing 80,000 downloads on [SourceForge](https://sourceforge.net/projects/zadark) and 15,000 active users on the [Chrome Web Store](https://chromewebstore.google.com/detail/llfhpkkeljlgnjgkholeppfnepmjppob) since 2022.
-
-I'm also the creator of [React Wheel Picker](https://react-wheel-picker.chanhdai.com) — iOS-like wheel picker for React with smooth inertia scrolling and infinite loop support. It has earned 221 stars on [GitHub](https://github.com/ncdai/react-wheel-picker) and was selected for **Vercel Open Source Program** summer 2025 cohort, receiving $3,600 in Vercel platform credits, an OSS Starter Pack, and priority community support to fuel its ongoing development.
+I’m also the creator of [MakeThumb](https://makethumb.com) — a self-hosted Vercel alternative that delivers one-click Dockerized builds, automatic asset deployment to S3, and secure multi-tenant reverse proxy routing. Designed for speed and scalability, it reduces React app deployment time from hours to minutes and provides developers with full control over their hosting pipeline.
 
 Let's connect and collaborate!`,
-  avatar: "https://assets.chanhdai.com/images/chanhdai-avatar-ghibli.webp", // suggest replacing with your own
+  avatar: "https://cdn.srb.codes/images/ghibli-style-happy-pfp.PNG",
   ogImage: "https://assets.chanhdai.com/images/screenshot-og-image-light.png",
   namePronunciationUrl: "",
   keywords: [
@@ -51,5 +47,5 @@ Let's connect and collaborate!`,
     "Full-Stack Engineer",
     "Generative AI Engineer",
   ],
-  dateCreated: "2023-10-20", // keep as is or update
+  dateCreated: "2025-07-27",
 };
