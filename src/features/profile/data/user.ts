@@ -31,7 +31,9 @@ I’m Sourabh Soni, a Full-Stack & Generative AI Engineer crafting scalable, clo
 I’m also the creator of [MakeThumb](https://makethumb.com) — a self-hosted Vercel alternative that delivers one-click Dockerized builds, automatic asset deployment to S3, and secure multi-tenant reverse proxy routing. Designed for speed and scalability, it reduces React app deployment time from hours to minutes and provides developers with full control over their hosting pipeline.
 
 Let's connect and collaborate!`,
-  avatar: "https://cdn.srb.codes/images/ghibli-style-happy-pfp.PNG",
+  avatar: "https://cdn.srb.codes/images/characters/ghibli-style-pfp.PNG",
+  avatar_happy:
+    "https://cdn.srb.codes/images/characters/ghibli-style-happy-pfp.PNG",
   ogImage: "https://assets.chanhdai.com/images/screenshot-og-image-light.png",
   namePronunciationUrl: "",
   keywords: [

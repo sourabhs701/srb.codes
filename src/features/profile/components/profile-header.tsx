@@ -1,3 +1,7 @@
+"use client";
+
+import { useTheme } from "next-themes";
+
 import { SimpleTooltip } from "@/components/ui/tooltip";
 import { USER } from "@/features/profile/data/user";
 import { cn } from "@/lib/utils";
@@ -6,6 +10,9 @@ import { FlipSentences } from "@/registry/flip-sentences";
 import { VerifiedIcon } from "./verified-icon";
 
 export function ProfileHeader() {
+  const { resolvedTheme } = useTheme();
+  const avatarSrc = resolvedTheme === "dark" ? USER.avatar : USER.avatar_happy;
+
   return (
     <div className="screen-line-after flex border-x border-edge">
       <div className="shrink-0 border-r border-edge">
@@ -14,7 +21,7 @@ export function ProfileHeader() {
           <img
             className="size-32 rounded-full ring-1 ring-border ring-offset-2 ring-offset-background select-none sm:size-40"
             alt={`${USER.displayName}'s avatar`}
-            src={USER.avatar}
+            src={avatarSrc}
             fetchPriority="high"
           />
         </div>
