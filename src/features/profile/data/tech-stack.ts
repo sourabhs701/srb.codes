@@ -1,16 +1,30 @@
 import type { TechStack } from "../types/tech-stack";
 
 export const TECH_STACK: TechStack[] = [
-  {
-    key: "typescript",
-    title: "TypeScript",
-    href: "https://www.typescriptlang.org/",
-    categories: ["Language"],
-  },
+  // {
+  //   key: "c",
+  //   title: "C",
+  //   href: "https://en.wikipedia.org/wiki/C_(programming_language)",
+  //   categories: ["Language"],
+  // },
+  // {
+  //   key: "cpp",
+  //   title: "C++",
+  //   href: "https://en.wikipedia.org/wiki/C%2B%2B",
+  //   categories: ["Language"],
+  // },
+
+  //Language
   {
     key: "js",
     title: "JavaScript",
     href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+    categories: ["Language"],
+  },
+  {
+    key: "ts",
+    title: "TypeScript",
+    href: "https://www.typescriptlang.org/",
     categories: ["Language"],
   },
   {
@@ -20,123 +34,44 @@ export const TECH_STACK: TechStack[] = [
     categories: ["Language"],
   },
   {
-    key: "php",
-    title: "PHP",
-    href: "https://www.php.net/",
+    key: "ruby",
+    title: "Ruby",
+    href: "https://www.ruby-lang.org/",
     categories: ["Language"],
   },
   {
-    key: "java",
-    title: "Java",
-    href: "https://www.java.com/",
+    key: "rust",
+    title: "Rust",
+    href: "https://www.rust-lang.org/",
     categories: ["Language"],
   },
+  //Frameworks
   {
-    key: "nodejs",
-    title: "Node.js",
-    href: "https://nodejs.org/",
-    categories: ["Runtime Environment"],
-  },
-  {
-    key: "bun",
-    title: "Bun",
-    href: "https://bun.sh/",
-    categories: ["Runtime Environment"],
-  },
-  {
-    key: "react",
-    title: "React",
-    href: "https://react.dev/",
-    categories: ["Library", "UI Library"],
-  },
-  {
-    key: "nextjs2",
+    key: "next-js",
     title: "Next.js",
     href: "https://nextjs.org/",
     categories: ["Framework"],
-    theme: true,
+    // theme: true,
   },
   {
-    key: "tailwindcss",
-    title: "Tailwind CSS",
-    href: "https://tailwindcss.com/",
+    key: "ror",
+    title: "Ruby on Rails",
+    href: "https://rubyonrails.org/",
     categories: ["Framework"],
   },
   {
-    key: "shadcn-ui",
-    title: "shadcn/ui",
-    href: "https://ui.shadcn.com/",
-    categories: ["Library", "Component Library"],
-    theme: true,
-  },
-  {
-    key: "radixui",
-    title: "Radix UI",
-    href: "https://www.radix-ui.com/",
-    categories: ["Library", "Component Library"],
-    theme: true,
-  },
-  {
-    key: "motion",
-    title: "Motion",
-    href: "https://motion.dev/",
-    categories: ["Library", "Animation"],
-  },
-  {
-    key: "mobx-state-tree",
-    title: "MobX-State-Tree",
-    href: "https://mobx-state-tree.js.org/",
-    categories: ["State Management"],
-  },
-  {
-    key: "redux",
-    title: "Redux",
-    href: "https://redux.js.org/",
-    categories: ["State Management"],
-  },
-  {
-    key: "antd",
-    title: "Ant Design",
-    href: "https://ant.design/",
-    categories: ["Library", "UI Library"],
-  },
-  {
-    key: "react-router",
-    title: "React Router",
-    href: "https://reactrouter.com/",
-    categories: ["Library", "Navigation"],
-    theme: true,
-  },
-  {
-    key: "react-navigation",
-    title: "React Navigation",
-    href: "https://reactnavigation.org/",
-    categories: ["Library", "Navigation"],
-  },
-  {
-    key: "loopback",
-    title: "LoopBack",
-    href: "https://loopback.io/",
+    key: "express",
+    title: "Express",
+    href: "https://expressjs.com/",
     categories: ["Framework"],
   },
   {
-    key: "laravel",
-    title: "Laravel",
-    href: "https://laravel.com/",
+    key: "fastapi",
+    title: "FastAPI",
+    href: "https://fastapi.tiangolo.com/",
     categories: ["Framework"],
   },
-  {
-    key: "git",
-    title: "Git",
-    href: "https://git-scm.com/",
-    categories: ["Version Control"],
-  },
-  {
-    key: "docker",
-    title: "Docker",
-    href: "https://www.docker.com/",
-    categories: ["Containerization"],
-  },
+  //Databases
   {
     key: "mysql",
     title: "MySQL",
@@ -156,28 +91,102 @@ export const TECH_STACK: TechStack[] = [
     categories: ["Database"],
   },
   {
-    key: "figma",
-    title: "Figma",
-    href: "https://www.figma.com/",
-    categories: ["Tools", "Design"],
+    key: "sqlite",
+    title: "SQLite",
+    href: "https://sqlite.org/",
+    categories: ["Database"],
+  },
+
+  //Libraries
+  {
+    key: "node-js",
+    title: "Node.js",
+    href: "https://nodejs.org/",
+    categories: ["Runtime Environment"],
   },
   {
-    key: "ps",
-    title: "Adobe Photoshop",
-    href: "https://www.adobe.com/vn_en/products/photoshop.html",
-    categories: ["Tools", "Design"],
+    key: "react",
+    title: "React",
+    href: "https://react.dev/",
+    categories: ["Library", "UI Library"],
   },
   {
-    key: "chatgpt",
-    title: "ChatGPT",
-    href: "https://chatgpt.com/",
-    categories: ["Tools", "AI"],
-    theme: true,
+    key: "shadcn-ui",
+    title: "shadcn/ui",
+    href: "https://ui.shadcn.com/",
+    categories: ["Library", "Component Library"],
+    // theme: true,
   },
-  // {
-  //   key: "zalo-mini-app",
-  //   title: "Zalo Mini App",
-  //   href: "https://mini.zalo.me/",
-  //   categories: ["Other"],
-  // },
+  {
+    key: "tailwind",
+    title: "Tailwind CSS",
+    href: "https://tailwindcss.com/",
+    categories: ["Framework"],
+  },
+  {
+    key: "socket-io",
+    title: "Socket-io",
+    href: "https://socket.io/",
+    categories: ["Tools"],
+  },
+  {
+    key: "tensor",
+    title: "Tensor Flow",
+    href: "https://www.tensorflow.org/",
+    categories: ["Library"],
+  },
+
+  //Tools
+  {
+    key: "git",
+    title: "Git",
+    href: "https://git-scm.com/",
+    categories: ["Version Control"],
+  },
+  {
+    key: "docker",
+    title: "Docker",
+    href: "https://www.docker.com/",
+    categories: ["Containerization"],
+  },
+  {
+    key: "github",
+    title: "GitHub",
+    href: "https://github.com/",
+    categories: ["Version Control"],
+  },
+
+  {
+    key: "postman",
+    title: "Postman",
+    href: "https://www.postman.com/",
+    categories: ["Tools"],
+  },
+
+  {
+    key: "vite",
+    title: "Vite",
+    href: "https://vite.dev/",
+    categories: ["Tools"],
+  },
+
+  //Devops
+  {
+    key: "aws",
+    title: "AWS",
+    href: "https://aws.amazon.com/",
+    categories: ["Cloud"],
+  },
+  {
+    key: "cfw",
+    title: "Cloudflare Worker",
+    href: "https://workers.cloudflare.com/",
+    categories: ["Cloud"],
+  },
+  {
+    key: "cf",
+    title: "Cloudflare",
+    href: "https://cloudflare.com/",
+    categories: ["Cloud"],
+  },
 ];
