@@ -1,33 +1,28 @@
 import type { User } from "@/features/profile/types/user";
 
 export const USER: User = {
-  firstName: "Chánh Đại",
-  lastName: "Nguyễn",
-  displayName: "Chánh Đại",
-  username: "ncdai",
+  firstName: "Sourabh",
+  lastName: "Soni",
+  displayName: "Sourabh Soni",
+  username: "srb",
   gender: "male",
   pronouns: "he/him",
-  bio: "Creating with code. Small details matter.",
+  bio: "Full-Stack & Generative AI Engineer | Building scalable systems with AI/ML integration.",
   flipSentences: [
-    "Creating with code. Small details matter.",
-    "Design Engineer",
+    "Full-Stack & Generative AI Engineer",
     "Open Source Contributor",
+    "Creating with code. Small details matter.",
   ],
-  address: "Thanh My Tay Ward, Ho Chi Minh City, Viet Nam",
-  phoneNumber: "Kzg0Nzc3ODg4MTQ4", // E.164 format, base64 encoded (https://t.io.vn/base64-string-converter)
-  email: "ZGFpQGNoYW5oZGFpLmNvbQ==", // base64 encoded
-  website: "https://chanhdai.com",
-  jobTitle: "Design Engineer",
+  address: "Jaipur, Rajasthan, India",
+  phoneNumber: "KzgxMDc2NTU3Mzc=", // base64 encoded
+  email: "c291cmFiaHM3MDFAZ21haWwuY29t", // base64 encoded
+  website: "https://srb.codes",
+  jobTitle: "Full-Stack & Generative AI Engineer",
   jobs: [
     {
-      title: "Senior Frontend Developer & UI Design Lead",
-      company: "Simplamo",
-      website: "https://simplamo.com?ref=IN-926722",
-    },
-    {
-      title: "Founder",
-      company: "Quaric",
-      website: "https://quaric.com",
+      title: "Full Stack Engineer Intern",
+      company: "Vedhin",
+      website: "https://vedhin.com",
     },
   ],
   about: `
@@ -39,23 +34,22 @@ One of my key projects, [ZaDark](https://zadark.com), enhances the Zalo experien
 
 I'm also the creator of [React Wheel Picker](https://react-wheel-picker.chanhdai.com) — iOS-like wheel picker for React with smooth inertia scrolling and infinite loop support. It has earned 221 stars on [GitHub](https://github.com/ncdai/react-wheel-picker) and was selected for **Vercel Open Source Program** summer 2025 cohort, receiving $3,600 in Vercel platform credits, an OSS Starter Pack, and priority community support to fuel its ongoing development.
 
-Let's connect and collaborate!
-  `,
-  avatar: "https://assets.chanhdai.com/images/chanhdai-avatar-ghibli.webp",
-  ogImage:
-    "https://assets.chanhdai.com/images/screenshot-og-image-light.png?t=1755355653",
-  namePronunciationUrl: "https://assets.chanhdai.com/audio/chanhdai.mp3",
+Let's connect and collaborate!`,
+  avatar: "https://assets.chanhdai.com/images/chanhdai-avatar-ghibli.webp", // suggest replacing with your own
+  ogImage: "https://assets.chanhdai.com/images/screenshot-og-image-light.png",
+  namePronunciationUrl: "",
   keywords: [
-    "ncdai",
-    "nguyenchanhdai",
-    "nguyen chanh dai",
-    "chanhdai",
-    "chanh dai",
-    "iamncdai",
-    "quaric",
-    "zadark",
-    "nguyễn chánh đại",
-    "chánh đại",
+    "Sourabh Soni",
+    "srb",
+    "srb.codes",
+    "Vedhin",
+    "Quaric",
+    "MakeThumb",
+    "HLS Transcoder",
+    "Google Drive Clone",
+    "College ChatBot",
+    "Full-Stack Engineer",
+    "Generative AI Engineer",
   ],
-  dateCreated: "2023-10-20", // YYYY-MM-DD
+  dateCreated: "2023-10-20", // keep as is or update
 };

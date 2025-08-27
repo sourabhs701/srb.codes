@@ -20,17 +20,41 @@ export function ProfileHeader() {
           />
         </div>
 
-        {/* Flag of Viet Nam */}
+        {/* Flag of India */}
         <svg
           className="absolute top-0 -left-px h-8 sm:h-9"
           viewBox="0 0 30 20"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <rect width="30" height="20" fill="#F00" />
-          <polygon
-            points="15,4 11.47,14.85 20.71,8.15 9.29,8.15 18.53,14.85"
-            fill="#FFEB00"
+          {/* Top saffron stripe */}
+          <rect width="30" height="6.67" y="0" fill="#FF9933" />
+
+          {/* Middle white stripe */}
+          <rect width="30" height="6.67" y="6.67" fill="#FFFFFF" />
+
+          {/* Bottom green stripe */}
+          <rect width="30" height="6.67" y="13.33" fill="#138808" />
+
+          {/* Ashoka Chakra */}
+          <circle
+            cx="15"
+            cy="10"
+            r="3"
+            stroke="#000080"
+            strokeWidth="0.6"
+            fill="none"
           />
+          {Array.from({ length: 24 }).map((_, i) => (
+            <line
+              key={i}
+              x1="15"
+              y1="10"
+              x2={15 + 3 * Math.cos((i * 15 * Math.PI) / 180)}
+              y2={10 + 3 * Math.sin((i * 15 * Math.PI) / 180)}
+              stroke="#000080"
+              strokeWidth="0.3"
+            />
+          ))}
         </svg>
       </div>
 
