@@ -1,6 +1,5 @@
 "use client";
-
-import { useTheme } from "next-themes";
+import Image from "next/image";
 
 import { SimpleTooltip } from "@/components/ui/tooltip";
 import { USER } from "@/features/profile/data/user";
@@ -8,22 +7,31 @@ import { cn } from "@/lib/utils";
 import { FlipSentences } from "@/registry/flip-sentences";
 
 import { VerifiedIcon } from "./verified-icon";
-
 export function ProfileHeader() {
-  const { resolvedTheme } = useTheme();
-  const avatarSrc = resolvedTheme === "light" ? USER.avatar_happy : USER.avatar;
-
   return (
     <div className="screen-line-after flex border-x border-edge">
       <div className="shrink-0 border-r border-edge">
         <div className="mx-[2px] my-[3px]">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            className="size-32 rounded-full ring-1 ring-border ring-offset-2 ring-offset-background select-none sm:size-40"
-            alt={`${USER.displayName}'s avatar`}
-            src={avatarSrc}
-            fetchPriority="high"
-          />
+          <>
+            <Image
+              className="hidden size-32 rounded-full ring-1 ring-border ring-offset-2 ring-offset-background select-none sm:size-40 [html.light_&]:block"
+              width={32}
+              height={32}
+              alt={`${USER.displayName}'s avatar`}
+              src={USER.avatar_happy}
+              fetchPriority="high"
+              unoptimized
+            />
+            <Image
+              className="hidden size-32 rounded-full ring-1 ring-border ring-offset-2 ring-offset-background select-none sm:size-40 [html.dark_&]:block"
+              width={32}
+              height={32}
+              alt={`${USER.displayName}'s avatar`}
+              src={USER.avatar}
+              fetchPriority="high"
+              unoptimized
+            />
+          </>
         </div>
 
         {/* Flag of India */}
