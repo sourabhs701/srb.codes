@@ -14,14 +14,14 @@ export function SiteFooter() {
         </p>
 
         <p className="mb-4 px-4 text-center font-mono text-sm text-balance text-muted-foreground">
-          Forked from{" "}
+          Maintained by{" "}
           <a
             className="link"
-            href="https://x.com/iamncdai"
+            href="https://x.com/srbcode"
             target="_blank"
             rel="noopener"
           >
-            ncdai
+            sourabhs701
           </a>
           . The source code is available on{" "}
           <a

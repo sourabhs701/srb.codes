@@ -1,24 +1,24 @@
 {
-  "name": "chanhdai.com",
+  "name": "srb.codes",
   "version": "0.1.0",
   "description": "A minimal portfolio, component registry, and blog.",
-  "homepage": "https://chanhdai.com",
+  "homepage": "https://srb.codes",
   "license": "MIT",
   "author": {
-    "name": "Nguyen Chanh Dai",
-    "email": "dai@chanhdai.com",
-    "url": "https://github.com/ncdai"
+    "name": "Sourabh Soni",
+    "email": "Sourabhs701@gmail.com",
+    "url": "https://github.com/Sourabhs701"
   },
   "contributors": [
     {
-      "name": "Nguyen Chanh Dai",
-      "email": "dai@chanhdai.com",
-      "url": "https://github.com/ncdai"
+      "name": "Sourabh Soni",
+      "email": "Sourabhs701@gmail.com",
+      "url": "https://github.com/Sourabhs701"
     }
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ncdai/chanhdai.com.git"
+    "url": "git+https://github.com/sourabhs701/srb.codes.git"
   },
   "scripts": {
     "dev": "next dev -p 1408 --turbopack",
