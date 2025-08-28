@@ -7,7 +7,7 @@ export const USER: User = {
   username: "srb",
   gender: "male",
   pronouns: "he/him",
-  bio: "Full-Stack & Generative AI Engineer | Building scalable systems with AI/ML integration.",
+  bio: "Building scalable systems with AI/ML integration.",
   flipSentences: [
     "Full-Stack & Generative AI Engineer",
     "Open Source Contributor",

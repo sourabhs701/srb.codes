@@ -24,9 +24,9 @@ export const CERTIFICATIONS: Certification[] = [
     issuer: "Vercel",
     issuerIconName: "vercel",
     issueDate: "2025-04-26",
-    credentialID: "react-foundations-47463-1745634245158",
+    credentialID: "react-foundations-94844-1756386189030",
     credentialURL:
-      "https://nextjs.org/learn/certificate?course=react-foundations&user=4746",
+      "https://nextjs.org/learn/certificate?course=react-foundations&user=94844&certId=react-foundations-94844-1756386189030",
   },
   {
     title: "Hacker Rank JavaScript (Intermediate)",
