@@ -14,21 +14,21 @@ export function ProfileHeader() {
         <div className="mx-[2px] my-[3px]">
           <>
             <Image
+              priority
               className="hidden size-32 rounded-full ring-1 ring-border ring-offset-2 ring-offset-background select-none sm:size-40 [html.light_&]:block"
-              width={32}
-              height={32}
+              width={160}
+              height={160}
               alt={`${USER.displayName}'s avatar`}
               src={USER.avatar_happy}
-              fetchPriority="high"
               unoptimized
             />
             <Image
+              priority
               className="hidden size-32 rounded-full ring-1 ring-border ring-offset-2 ring-offset-background select-none sm:size-40 [html.dark_&]:block"
-              width={32}
-              height={32}
+              width={160}
+              height={160}
               alt={`${USER.displayName}'s avatar`}
               src={USER.avatar}
-              fetchPriority="high"
               unoptimized
             />
           </>
