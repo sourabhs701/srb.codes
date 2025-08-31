@@ -14,7 +14,7 @@ export const USER: User = {
     "Creating with code. Small details matter.",
   ],
   address: "Jaipur, Rajasthan, India",
-  phoneNumber: "KzgxMDc2NTU3Mzc=",
+  phoneNumber: "KzkxODEwNzY1NTczNw==",
   email: "c291cmFiaHM3MDFAZ21haWwuY29t",
   website: "https://srb.codes",
   jobTitle: "Engineer",
