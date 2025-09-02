@@ -14,24 +14,15 @@ export const EXPERIENCES: Experience[] = [
         },
         employmentType: "Full-time",
         icon: "code",
-        description: `- Develop [AI Chat](https://help.simplamo.com/features/simplamo-ai/ai-chat/guide_simplamo_ai_chat?ref=IN-926722) and [AI Assistant](https://help.simplamo.com/features/simplamo-ai/ai-expert/aiexpert-rockdiscribe?ref=IN-926722) features.
-- Develop [Whiteboards](https://help.simplamo.com/features/whiteboard/overview?ref=IN-926722) with real-time collaboration.
-- Build and maintain the [Zalo Mini App](https://zalo.me/s/1736112917405511258/) for Simplamo with seamless integration.
-- Develop interactive chart and analytics widgets for the [Dashboard](https://help.simplamo.com/features/dashboard/overview) to enhance data visualization.
+        description: `- Build and maintain the [Hostmeup](https://cloud.srb.codes) for cloud storage solution.
 - Develop and maintain core features to enhance functionality and user experience.
 - Ensure UI/UX consistency and adherence to standards.
-- Implement robust frontend solutions for web and mobile platforms.
+- Implement Finance chat bot using chainlit and python.
 - Analyze technical capabilities and provide optimal solutions.`,
         skills: [
-          "TypeScript",
-          "Next.js",
-          "React Native",
-          "MobX",
-          "MobX-State-Tree",
-          "Tailwind CSS",
-          "Dify",
-          "Zalo Mini App",
-          "Agile",
+          "python",
+          "chainlit",
+          "Database",
           "Teamwork",
           "Research",
           "Problem-solving",
@@ -83,24 +74,23 @@ export const EXPERIENCES: Experience[] = [
         id: "f0becfba-057d-40db-b252-739e1654faa1",
         title: "Full-stack Developer",
         employmentPeriod: {
-          start: "2018",
-          end: "2020",
+          start: "2022",
+          end: "2025",
         },
         employmentType: "Part-time",
-        description: `- Built an order management website with real-time delivery tracking.
-- Developed an e-commerce site for bird's nest products.
-- Created a map to display monitoring station data.
-- Designed a customizable WordPress landing page.`,
+        description: `- Built an NFT trading marketplace with multi level markting reward based system (BSC blockchain).
+- Developed an e-commerce site for jewelry products and integrated payment gateway (Stripe).
+- Developed and Integrated Notification system (Push notifications) using Queue system (SQS).
+`,
         icon: "code",
         skills: [
-          "Laravel",
           "React",
           "Express.js",
-          "Socket.IO",
-          "MongoDB",
           "Firebase",
-          "WordPress",
+          "PostgreSQL",
           "Docker",
+          "AWS",
+          "Cloudflare",
           "NGINX",
         ],
       },

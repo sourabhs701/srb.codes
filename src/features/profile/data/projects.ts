@@ -5,9 +5,9 @@ export const PROJECTS: Project[] = [
     id: "makethumb",
     title: "MakeThumb — Self-hosted Vercel Clone",
     period: {
-      start: "2024", // Assuming recent development based on resume
+      start: "2025",
     },
-    link: "#", // Add actual project link if available
+    link: "https://makethumb.com",
     skills: [
       "Node.js",
       "AWS ECS",
@@ -17,7 +17,7 @@ export const PROJECTS: Project[] = [
       "CI/CD",
     ],
     description: `Reduced deployment time for React apps from hours to minutes with a one-click Dockerized build on demand pipeline, deploying compiled assets to S3, and routing traffic through a secure, multi-tenant reverse proxy for fast, isolated, and scalable releases.`,
-    logo: "https://cdn.srb.codes/images/project-logos/makethumb.png", // Replace with actual logo if available
+    logo: "https://cdn.srb.codes/images/project-logos/makethumb.png",
     isExpanded: true,
   },
   {
