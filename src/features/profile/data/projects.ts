@@ -2,6 +2,25 @@ import type { Project } from "../types/projects";
 
 export const PROJECTS: Project[] = [
   {
+    id: "aihead",
+    title: "AIHead — Professional Headshot Generator with AI",
+    period: {
+      start: "2025",
+    },
+    link: "https://aihead.me",
+    skills: [
+      "Next.js",
+      "TypeScript",
+      "AI/ML",
+      "Google Gemini",
+      "Tailwind CSS",
+      "shadcn/ui",
+    ],
+    description: `Built an AI-powered platform that generates professional headshots using generative AI technology. The platform allows users to upload their photos and create high-quality, professional headshots suitable for LinkedIn, resumes, and business profiles.`,
+    logo: "https://cdn.srb.codes/aihead.me/logo.svg",
+    isExpanded: true,
+  },
+  {
     id: "makethumb",
     title: "MakeThumb — Self-hosted Vercel Clone",
     period: {
@@ -18,7 +37,7 @@ export const PROJECTS: Project[] = [
     ],
     description: `Reduced deployment time for React apps from hours to minutes with a one-click Dockerized build on demand pipeline, deploying compiled assets to S3, and routing traffic through a secure, multi-tenant reverse proxy for fast, isolated, and scalable releases.`,
     logo: "https://cdn.srb.codes/images/project-logos/makethumb.png",
-    isExpanded: true,
+    isExpanded: false,
   },
   {
     id: "hls-transcoder",

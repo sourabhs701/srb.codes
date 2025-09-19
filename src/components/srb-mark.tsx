@@ -164,3 +164,93 @@ export const SrbWordmark = () => {
     </svg>
   );
 };
+
+// Helper component for outline letters
+const SVGLetterOutline = ({
+  pattern,
+  x,
+  y,
+}: {
+  pattern: number[][];
+  x: number;
+  y: number;
+}) => {
+  const cellSize = 10;
+
+  return (
+    <>
+      {pattern.map((row, rowIndex) =>
+        row.map((cell, colIndex) =>
+          cell === 1 ? (
+            <rect
+              key={`${rowIndex}-${colIndex}`}
+              x={x + colIndex * cellSize}
+              y={y + rowIndex * cellSize}
+              width={cellSize}
+              height={cellSize}
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={1.5}
+            />
+          ) : null
+        )
+      )}
+    </>
+  );
+};
+
+// Full outline logo <Mark> srb.codes
+export const SrbWordmarkOutline = () => {
+  const letterS = [
+    [0, 1, 1, 1, 1, 1, 0, 0],
+    [1, 0, 0, 0, 0, 0, 1, 0],
+    [1, 0, 0, 0, 0, 0, 0, 0],
+    [0, 1, 1, 1, 1, 1, 0, 0],
+    [0, 0, 0, 0, 0, 0, 1, 0],
+    [1, 0, 0, 0, 0, 0, 1, 0],
+    [0, 1, 1, 1, 1, 1, 0, 0],
+  ];
+
+  const letterR = [
+    [0, 1, 1, 1, 1, 1, 0, 0],
+    [1, 0, 0, 0, 0, 0, 1, 0],
+    [1, 0, 0, 0, 0, 0, 1, 0],
+    [1, 1, 1, 1, 1, 1, 0, 0],
+    [1, 0, 0, 1, 0, 0, 0, 0],
+    [1, 0, 0, 0, 1, 0, 0, 0],
+    [1, 0, 0, 0, 0, 1, 0, 0],
+  ];
+
+  const letterB = [
+    [0, 1, 1, 1, 1, 1, 0, 0],
+    [1, 0, 0, 0, 0, 0, 1, 0],
+    [1, 0, 0, 0, 0, 0, 1, 0],
+    [1, 1, 1, 1, 1, 1, 0, 0],
+    [1, 0, 0, 0, 0, 0, 1, 0],
+    [1, 0, 0, 0, 0, 0, 1, 0],
+    [1, 1, 1, 1, 1, 1, 0, 0],
+  ];
+
+  const letterWidth = 80;
+  const letterSpacing = 12;
+
+  return (
+    <svg
+      width={letterWidth * 3 + letterSpacing * 2}
+      height={letterWidth}
+      viewBox={`0 0 ${letterWidth * 3 + letterSpacing * 2} ${letterWidth}`}
+    >
+      <SVGLetterOutline pattern={letterS} x={0} y={0} />
+      <SVGLetterOutline
+        pattern={letterR}
+        x={letterWidth + letterSpacing}
+        y={0}
+      />
+      <SVGLetterOutline
+        pattern={letterB}
+        x={(letterWidth + letterSpacing) * 2}
+        y={0}
+      />
+    </svg>
+  );
+};

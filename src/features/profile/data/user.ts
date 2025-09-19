@@ -20,17 +20,12 @@ export const USER: User = {
   jobTitle: "Engineer",
   jobs: [
     {
-      title: "Gen AI Engineer Intern",
+      title: "Gen AI Engineer Trainee",
       company: "Datamonk",
       website: "https://learn.datamonk.dev",
     },
   ],
-  about: `
-I’m Sourabh Soni, a Full-Stack & Generative AI Engineer crafting scalable, cloud-native applications and intelligent systems powered by LLMs. My work spans from blockchain-based payment flows to distributed video streaming pipelines and self-hosted deployment platforms, blending system design, automation, and applied AI to solve real problems.
-
-I’m also the creator of [MakeThumb](https://makethumb.com) — a self-hosted Vercel alternative that delivers one-click Dockerized builds, automatic asset deployment to S3, and secure multi-tenant reverse proxy routing. Designed for speed and scalability, it reduces React app deployment time from hours to minutes and provides developers with full control over their hosting pipeline.
-
-Let's connect and collaborate!`,
+  about: `Full-stack engineer building AI-powered solutions. Creator of [MakeThumb](https://makethumb.com) and [AIHead](https://aihead.me) — tools that simplify development workflows and enhance productivity.`,
   avatar: "https://cdn.srb.codes/images/characters/ghibli-style-pfp.PNG",
   avatar_happy:
     "https://cdn.srb.codes/images/characters/ghibli-style-happy-pfp.PNG",
@@ -43,6 +38,8 @@ Let's connect and collaborate!`,
     "Vedhin",
     "Quaric",
     "MakeThumb",
+    "AIHead",
+    "aihead.me",
     "HLS Transcoder",
     "Google Drive Clone",
     "College ChatBot",

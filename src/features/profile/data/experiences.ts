@@ -79,19 +79,18 @@ export const EXPERIENCES: Experience[] = [
         },
         employmentType: "Part-time",
         description: `- Built an NFT trading marketplace with multi level markting reward based system (BSC blockchain).
-- Developed an e-commerce site for jewelry products and integrated payment gateway (Stripe).
+- Developed an e-commerce site for jewelry products and integrated payment gateway (Razorpay).
 - Developed and Integrated Notification system (Push notifications) using Queue system (SQS).
 `,
         icon: "code",
         skills: [
           "React",
           "Express.js",
-          "Firebase",
+          "Razorpay",
           "PostgreSQL",
           "Docker",
           "AWS",
           "Cloudflare",
-          "NGINX",
         ],
       },
     ],
