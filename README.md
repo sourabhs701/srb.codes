@@ -34,7 +34,6 @@ Check out the live site: [chanhdai.com](https://chanhdai.com)
 - SEO optimization: [JSON-LD schema](https://json-ld.org), sitemap, robots
 - AI-friendly [/llms.txt](https://llmstxt.org)
 - Spam-protected email
-- Installable PWA
 
 ### Blog
 
