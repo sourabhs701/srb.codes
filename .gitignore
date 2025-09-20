@@ -9,6 +9,7 @@
 !.yarn/plugins
 !.yarn/releases
 !.yarn/versions
+src/features/blog/content-deprecated
 
 # testing
 /coverage

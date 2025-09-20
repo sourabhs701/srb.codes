@@ -40,8 +40,8 @@ export default function Page() {
         <SocialLinks />
         <Separator />
 
-        {/* <Blog />
-        <Separator /> */}
+        <Blog />
+        <Separator />
 
         <Projects />
         <Separator />

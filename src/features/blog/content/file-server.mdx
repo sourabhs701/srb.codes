@@ -1,0 +1,86 @@
+---
+title: File Server with Cloudflare Workers
+description: A secure file upload service using Cloudflare Workers, AWS S3, and Clerk authentication for multi-tenant applications.
+image: https://cdn.srb.codes/images/blog/file-server-design.png
+category: development
+new: true
+createdAt: 2025-01-27
+updatedAt: 2025-01-27
+---
+
+I built a secure file server using Cloudflare Workers that provides presigned S3 upload URLs for authenticated users. This solution is perfect for multi-tenant applications that need secure file uploads without exposing AWS credentials.
+
+![System Design](https://cdn.srb.codes/images/blog/file-server-design.png)
+
+## Key Features
+
+- 🔐 **Clerk Authentication** - JWT token verification
+- 🪣 **S3 Integration** - Presigned upload URLs for secure uploads
+- 🌐 **Multi-tenant** - Support for multiple applications
+- ⚡ **Cloudflare Workers** - Global edge computing
+
+## How It Works
+
+The system generates presigned S3 upload URLs for authenticated users:
+
+**Endpoint:** `GET /:filename`
+
+```bash
+curl -X GET "https://files.srb.codes/example.jpg?contentType=image/jpeg" \
+  -H "Authorization: Bearer YOUR_CLERK_JWT_TOKEN"
+```
+
+**Response:**
+
+```json
+{
+  "ok": true,
+  "uploadUrl": "https://s3.amazonaws.com/bucket/presigned-url",
+  "key": "tenant/user-id/example.jpg",
+  "expiresIn": 3600
+}
+```
+
+## Upload Flow
+
+```javascript
+// 1. Get upload URL
+const response = await fetch(
+  "https://files.srb.codes/myfile.jpg?contentType=image/jpeg",
+  {
+    headers: {
+      Authorization: `Bearer ${clerkToken}`,
+    },
+  }
+);
+
+const { uploadUrl, key } = await response.json();
+
+// 2. Upload file to S3
+const uploadResponse = await fetch(uploadUrl, {
+  method: "PUT",
+  body: fileBlob,
+  headers: {
+    "Content-Type": "image/jpeg",
+  },
+});
+
+if (uploadResponse.ok) {
+  console.log("File uploaded successfully!");
+}
+```
+
+## Architecture
+
+- **Cloudflare Workers** - Handles authentication and generates presigned URLs
+- **AWS S3** - Stores files with proper access controls
+- **Clerk** - Manages user authentication and JWT tokens
+
+## Security
+
+- All requests require valid Clerk JWT tokens
+- Files uploaded directly to S3 using presigned URLs
+- User files isolated by tenant and user ID
+- Upload URLs expire after 1 hour
+
+The code is open source and available on GitHub: [https://github.com/sourabhs701/file-server](https://github.com/sourabhs701/file-server)
