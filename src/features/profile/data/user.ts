@@ -26,9 +26,7 @@ export const USER: User = {
     },
   ],
   about: `Full-stack engineer building AI-powered solutions. Creator of [MakeThumb](https://makethumb.com) and [AIHead](https://aihead.me) — tools that simplify development workflows and enhance productivity.`,
-  avatar: "https://cdn.srb.codes/images/characters/ghibli-style-pfp.PNG",
-  avatar_happy:
-    "https://cdn.srb.codes/images/characters/ghibli-style-happy-pfp.PNG",
+  avatar: "https://cdn.srb.codes/images/characters/ghibli-style-happy-pfp.PNG",
   ogImage: "https://cdn.srb.codes/images/srbcode-og.png",
   namePronunciationUrl: "",
   keywords: [
