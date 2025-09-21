@@ -4,8 +4,8 @@ description: Understanding JavaScript closures and lexical scoping with practica
 image: https://cdn.srb.codes/images/blog/closures-javascript.png
 category: development
 new: true
-createdAt: 2025-01-27
-updatedAt: 2025-01-27
+createdAt: 2025-09-21
+updatedAt: 2025-09-21
 ---
 
 JavaScript closures are one of the most powerful yet misunderstood features of the language. They enable powerful programming patterns and are fundamental to understanding how JavaScript works. Let's break down closures and lexical scoping with clear examples.
@@ -55,60 +55,15 @@ The returned function maintains access to the `count` variable even though `crea
 
 ## Practical Examples
 
-### 1. Data Privacy
+### Interactive Font Resizer
 
-Closures enable private variables in JavaScript:
+Here's a practical example of closures in action - a **font** resizer that maintains its state:
 
-```javascript
-function createBankAccount(initialBalance) {
-  let balance = initialBalance;
-
-  return {
-    deposit: function (amount) {
-      balance += amount;
-      return balance;
-    },
-    withdraw: function (amount) {
-      if (amount <= balance) {
-        balance -= amount;
-        return balance;
-      }
-      return "Insufficient funds";
-    },
-    getBalance: function () {
-      return balance;
-    },
-  };
-}
-
-const account = createBankAccount(100);
-console.log(account.getBalance()); // 100
-account.deposit(50);
-console.log(account.getBalance()); // 150
-// account.balance; // undefined - private!
-```
-
-### 2. Function Factories
-
-Closures are perfect for creating specialized functions:
-
-```javascript
-function createMultiplier(multiplier) {
-  return function (number) {
-    return number * multiplier;
-  };
-}
-
-const double = createMultiplier(2);
-const triple = createMultiplier(3);
-
-console.log(double(5)); // 10
-console.log(triple(5)); // 15
-```
-
-### 3. Interactive Font Resizer
-
-Here's a practical example of closures in action - a font resizer that maintains its state:
+<img
+  src="https://cdn.srb.codes/images/blog/javascript-closures.gif"
+  alt="JavaScript closures demo showing font resizer in action"
+  className="mx-auto rounded-lg shadow-lg"
+/>
 
 ```html
 <!doctype html>
@@ -158,8 +113,6 @@ Here's a practical example of closures in action - a font resizer that maintains
   </script>
 </html>
 ```
-
-In this example, `createFontResizer` returns an object with `increase` and `decrease` methods. These methods have access to the `size` variable and `title` element through closure, even after `createFontResizer` finishes executing. The `size` variable acts as private state that can only be modified through the returned methods.
 
 ## Key Takeaways
 
