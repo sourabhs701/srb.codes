@@ -1,0 +1,175 @@
+---
+title: JavaScript Closures and Lexical Scoping Explained
+description: Understanding JavaScript closures and lexical scoping with practical examples. Learn how closures work and why they're essential for modern JavaScript development.
+image: https://cdn.srb.codes/images/blog/closures-javascript.png
+category: development
+new: true
+createdAt: 2025-01-27
+updatedAt: 2025-01-27
+---
+
+JavaScript closures are one of the most powerful yet misunderstood features of the language. They enable powerful programming patterns and are fundamental to understanding how JavaScript works. Let's break down closures and lexical scoping with clear examples.
+
+## What is Lexical Scoping?
+
+Lexical scoping (also called static scoping) means that the scope of a variable is determined by where it's written in the code, not where it's called.
+
+```javascript
+function outerFunction() {
+  const outerVariable = "I am from outer function";
+
+  function innerFunction() {
+    console.log(outerVariable); // Can access outer variable
+  }
+
+  return innerFunction;
+}
+
+const myFunction = outerFunction();
+myFunction(); // "I am from outer function"
+```
+
+The inner function has access to variables in its lexical environment, even after the outer function has finished executing.
+
+## What is a Closure?
+
+A closure is a function that has access to variables in its outer (enclosing) scope even after the outer function returns. It "closes over" the variables from its lexical scope.
+
+```javascript
+function createCounter() {
+  let count = 0;
+
+  return function () {
+    count++;
+    return count;
+  };
+}
+
+const counter = createCounter();
+console.log(counter()); // 1
+console.log(counter()); // 2
+console.log(counter()); // 3
+```
+
+The returned function maintains access to the `count` variable even though `createCounter` has finished executing.
+
+## Practical Examples
+
+### 1. Data Privacy
+
+Closures enable private variables in JavaScript:
+
+```javascript
+function createBankAccount(initialBalance) {
+  let balance = initialBalance;
+
+  return {
+    deposit: function (amount) {
+      balance += amount;
+      return balance;
+    },
+    withdraw: function (amount) {
+      if (amount <= balance) {
+        balance -= amount;
+        return balance;
+      }
+      return "Insufficient funds";
+    },
+    getBalance: function () {
+      return balance;
+    },
+  };
+}
+
+const account = createBankAccount(100);
+console.log(account.getBalance()); // 100
+account.deposit(50);
+console.log(account.getBalance()); // 150
+// account.balance; // undefined - private!
+```
+
+### 2. Function Factories
+
+Closures are perfect for creating specialized functions:
+
+```javascript
+function createMultiplier(multiplier) {
+  return function (number) {
+    return number * multiplier;
+  };
+}
+
+const double = createMultiplier(2);
+const triple = createMultiplier(3);
+
+console.log(double(5)); // 10
+console.log(triple(5)); // 15
+```
+
+### 3. Interactive Font Resizer
+
+Here's a practical example of closures in action - a font resizer that maintains its state:
+
+```html
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body
+    class="flex h-screen flex-col items-center justify-center gap-2 bg-[#313131]"
+  >
+    <div class="max-w-5xl">
+      <div class="mb-2 flex w-full justify-end gap-2">
+        <button id="increase" class="bg-white px-3">+</button>
+        <button id="decrease" class="bg-white px-3">-</button>
+      </div>
+
+      <h1
+        class="flex h-[500px] w-[500px] items-center justify-center border text-5xl text-white"
+        id="title"
+      >
+        Closure!
+      </h1>
+    </div>
+  </body>
+  <script>
+    function createFontResizer(elementId) {
+      const title = document.getElementById(elementId);
+      let size = parseFloat(window.getComputedStyle(title).fontSize);
+
+      function changeFont(delta) {
+        size += delta;
+        title.style.fontSize = size + "px";
+      }
+
+      return {
+        increase: () => changeFont(2),
+        decrease: () => changeFont(-2),
+      };
+    }
+
+    const resizer = createFontResizer("title");
+
+    document.getElementById("increase").onclick = resizer.increase;
+    document.getElementById("decrease").onclick = resizer.decrease;
+  </script>
+</html>
+```
+
+In this example, `createFontResizer` returns an object with `increase` and `decrease` methods. These methods have access to the `size` variable and `title` element through closure, even after `createFontResizer` finishes executing. The `size` variable acts as private state that can only be modified through the returned methods.
+
+## Key Takeaways
+
+1. **Lexical Scoping**: Variables are accessible based on where they're written in code
+2. **Closures**: Functions that remember their lexical environment
+3. **Use Cases**: Data privacy, function factories
+4. **Watch Out For**: Loop variables with `var`
+
+Closures are everywhere in JavaScript. Understanding them deeply will make you a better JavaScript developer and help you write more elegant, maintainable code.
+
+## Further Reading
+
+- [MDN Closures Documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures)
