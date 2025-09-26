@@ -11,7 +11,7 @@ import { Overview } from "@/features/profile/components/overview";
 import { ProfileCover } from "@/features/profile/components/profile-cover";
 import { ProfileHeader } from "@/features/profile/components/profile-header";
 import { Projects } from "@/features/profile/components/projects";
-import { SocialLinks } from "@/features/profile/components/social-links";
+// import { SocialLinks } from "@/features/profile/components/social-links";
 import { TeckStack } from "@/features/profile/components/teck-stack";
 import { USER } from "@/features/profile/data/user";
 import { cn } from "@/lib/utils";
@@ -31,14 +31,14 @@ export default function Page() {
         <ProfileHeader />
         <Separator />
 
-        <Overview />
-        <Separator />
-
         <About />
         <Separator />
 
-        <SocialLinks />
+        <Overview />
         <Separator />
+
+        {/* <SocialLinks />
+        <Separator /> */}
 
         <Blog />
         <Separator />
