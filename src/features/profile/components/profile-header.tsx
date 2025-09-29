@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 
+import { RealTimeClock } from "@/components/real-time-clock";
 import { SimpleTooltip } from "@/components/ui/tooltip";
 import { USER } from "@/features/profile/data/user";
 import { cn } from "@/lib/utils";
@@ -63,15 +64,20 @@ export function ProfileHeader() {
       <div className="flex flex-1 flex-col">
         <div
           className={cn(
-            "flex grow items-end pb-1 pl-4",
+            "flex grow items-start justify-end pr-4 pb-1 pl-4",
             "bg-[repeating-linear-gradient(315deg,var(--pattern-foreground)_0,var(--pattern-foreground)_1px,transparent_0,transparent_50%)] bg-size-[10px_10px] [--pattern-foreground:var(--color-edge)]/56"
           )}
         >
-          <div className="line-clamp-1 font-mono text-xs text-zinc-300 select-none max-sm:hidden dark:text-zinc-800">
-            {"text-3xl "}
-            <span className="inline dark:hidden">text-zinc-950</span>
-            <span className="hidden dark:inline">text-zinc-50</span>
-            {" font-medium"}
+          <div className="py-2 font-mono text-xs text-zinc-400 dark:text-zinc-600">
+            <div className="flex items-center gap-2">
+              <div className="h-2 w-2 rounded-full bg-green-500" />
+              <RealTimeClock
+                timeZone="Asia/Kolkata"
+                showSeconds={true}
+                hour12={true}
+              />{" "}
+              : Jaipur, India
+            </div>
           </div>
         </div>
 

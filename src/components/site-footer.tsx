@@ -1,9 +1,4 @@
-// import { RssIcon } from "lucide-react";
-
-import { SOURCE_CODE_GITHUB_URL } from "@/config/site";
 import { cn } from "@/lib/utils";
-
-// import { Icons } from "./icons";
 
 export function SiteFooter() {
   return (

@@ -1,4 +1,4 @@
-import { GlobeIcon, MapPinIcon, MarsIcon, VenusIcon } from "lucide-react";
+import { GlobeIcon, MarsIcon, VenusIcon } from "lucide-react";
 
 import { USER } from "@/features/profile/data/user";
 import { urlToName } from "@/utils/url";
@@ -25,8 +25,6 @@ export function Overview() {
             />
           );
         })}
-
-        <IntroItem icon={MapPinIcon} content={USER.address} />
 
         <PhoneItem phoneNumber={USER.phoneNumber} />
 
