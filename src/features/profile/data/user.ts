@@ -7,9 +7,10 @@ export const USER: User = {
   username: "srb",
   gender: "male",
   pronouns: "he/him",
-  bio: "Building scalable systems with AI/ML integration.",
+
+  bio: "Building scalable systems with AI integration.",
   flipSentences: [
-    "Full-Stack & Generative AI Engineer",
+    "Full-Stack Engineer",
     "Open Source Contributor",
     "Creating with code. Small details matter.",
   ],
@@ -25,7 +26,7 @@ export const USER: User = {
       website: "https://learn.datamonk.dev",
     },
   ],
-  about: `Full-stack engineer building AI-powered solutions. Creator of [MakeThumb](https://makethumb.com) and [AIHead](https://aihead.me) — tools that simplify development workflows and enhance productivity.`,
+  about: `Full-stack engineer. Creator of [MakeThumb](https://makethumb.com) and [AIHead](https://aihead.me) — tools that simplify development workflows and enhance productivity.`,
   avatar: "https://cdn.srb.codes/images/characters/ghibli-style-happy-pfp.PNG",
   ogImage: "https://cdn.srb.codes/images/srbcode-og.png",
   namePronunciationUrl: "",
@@ -45,4 +46,5 @@ export const USER: User = {
     "Generative AI Engineer",
   ],
   dateCreated: "2025-07-27",
+  available: false,
 };
