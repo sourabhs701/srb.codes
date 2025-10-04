@@ -16,10 +16,16 @@ export function ProfileCover() {
         "relative"
       )}
     >
-      <SrbBrandmark />
+      {/* hover to animate */}
+      <div className="flex flex-col items-center justify-center gap-2">
+        <SrbBrandmark />
+        <span className="mt-4 text-xs text-zinc-400 dark:text-zinc-600">
+          hover ? WorkMark : BrandMark{" "}
+        </span>
+      </div>
 
       {USER.available !== undefined && (
-        <div className="absolute top-4 right-4">
+        <div className="absolute top-2 right-2">
           {USER.available ? (
             <Tag className="border-green-200 bg-green-100 text-green-800 dark:border-green-800 dark:bg-green-900/20 dark:text-green-400">
               <span className="relative flex items-center gap-1.5">
