@@ -39,7 +39,7 @@ const eslintConfig = [
   //   },
   //   settings: {
   //     "boundaries/include": ["src/**/*"],
-  //     "boundaries/ignore": ["src/scripts/**/*", "src/__registry__/**/*"],
+  //     "boundaries/ignore": ["src/scripts/**/*"],
   //     "boundaries/elements": [
   //       {
   //         mode: "full",
@@ -50,7 +50,6 @@ const eslintConfig = [
   //           "src/data/**/*",
   //           "src/hooks/**/*",
   //           "src/lib/**/*",
-  //           "src/registry/**/*",
   //           "src/styles/**/*",
   //           "src/types/**/*",
   //           "src/utils/**/*",

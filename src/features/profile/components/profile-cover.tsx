@@ -1,10 +1,10 @@
 import { SrbBrandmark } from "@/components/srb-mark";
-import { Tag } from "@/components/ui/tag";
-import { USER } from "@/features/profile/data/user";
+// import { Tag } from "@/components/ui/tag";
+// import { USER } from "@/features/profile/data/user";
 import { cn } from "@/lib/utils";
 
 export function ProfileCover() {
-  const currentMonth = new Date().toLocaleString("default", { month: "short" });
+  // const currentMonth = new Date().toLocaleString("default", { month: "short" });
 
   return (
     <div
@@ -24,7 +24,7 @@ export function ProfileCover() {
         </span>
       </div>
 
-      {USER.available !== undefined && (
+      {/* {USER.available !== undefined && (
         <div className="absolute top-2 right-2">
           {USER.available ? (
             <Tag className="border-green-200 bg-green-100 text-green-800 dark:border-green-800 dark:bg-green-900/20 dark:text-green-400">
@@ -43,7 +43,7 @@ export function ProfileCover() {
             </Tag>
           )}
         </div>
-      )}
+      )} */}
     </div>
   );
 }

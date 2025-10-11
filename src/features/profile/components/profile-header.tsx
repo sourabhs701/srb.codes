@@ -5,7 +5,6 @@ import { RealTimeClock } from "@/components/real-time-clock";
 import { SimpleTooltip } from "@/components/ui/tooltip";
 import { USER } from "@/features/profile/data/user";
 import { cn } from "@/lib/utils";
-import { FlipSentences } from "@/registry/flip-sentences";
 
 import { VerifiedIcon } from "./verified-icon";
 export function ProfileHeader() {
@@ -90,8 +89,10 @@ export function ProfileHeader() {
             </SimpleTooltip>
           </h1>
 
-          <div className="h-12 border-t border-edge py-1 pl-4 sm:h-auto">
-            <FlipSentences sentences={USER.flipSentences} />
+          <div className="border-t border-edge py-2 pl-4">
+            <p className="text-sm text-muted-foreground">
+              {USER.flipSentences?.[0] || USER.bio || ""}
+            </p>
           </div>
         </div>
       </div>

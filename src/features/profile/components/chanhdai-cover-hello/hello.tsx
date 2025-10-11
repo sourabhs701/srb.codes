@@ -7,7 +7,6 @@ import React, { useCallback, useEffect, useState } from "react";
 // import { ChanhDaiMark } from "@/components/chanhdai-mark";
 import { Button } from "@/components/ui/button";
 import { SimpleTooltip } from "@/components/ui/tooltip";
-import { AppleHelloVietnameseEffect } from "@/registry/apple-hello-effect";
 
 const layers = ["xin-chao", "chanhdai-wordmark"] as const;
 
@@ -39,11 +38,16 @@ export function Hello() {
           className="flex items-center justify-center text-black dark:text-white"
         >
           {layers[currentIndex] === "xin-chao" && (
-            <AppleHelloVietnameseEffect
-              className="h-10 sm:h-16"
+            <motion.div
+              className="flex h-10 items-center justify-center text-3xl font-semibold sm:h-16 sm:text-5xl"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.8 }}
+              transition={{ duration: 0.5 }}
               onAnimationComplete={nextAnimation}
-            />
+            >
+              Xin chào
+            </motion.div>
           )}
 
           {/* {layers[currentIndex] === "hello" && (

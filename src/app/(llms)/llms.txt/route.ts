@@ -5,7 +5,7 @@ const allPosts = getAllPosts();
 
 const content = `# srb.codes
 
-> A minimal portfolio, component registry, and blog to showcase my work as a Full Stack Engineer.
+> A minimal portfolio and blog to showcase my work as a Full Stack Engineer.
 
 - [About](${SITE_INFO.url}/about.md): A quick intro to me, my tech stack, and how to connect.
 - [Experience](${SITE_INFO.url}/experience.md): Highlights from my career and key roles I've taken on.
