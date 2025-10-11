@@ -1,0 +1,55 @@
+---
+title: Redirect x.srb.codes to x.com/srbcode
+description: Learn how to Create a redirect rule from Cloudflare dashboard.
+image: https://cdn.srb.codes/images/blog/cloudflare-redirect.png
+category: development
+new: true
+createdAt: 2025-10-11
+updatedAt: 2025-10-11
+---
+
+I wanted to redirect `x.srb.codes` to `x.com/srbcode` for my personal website. Here's how I created a redirect rule in Cloudflare.
+
+## Steps
+
+### 1. Create a DNS A Record
+
+First, create a new A record in Cloudflare DNS with the following details:
+
+- **Name**: `x`
+- **Type**: `A`
+- **Content**: `192.0.2.1`
+- **Proxied**: On (Orange cloud icon)
+
+### 2. Create a Redirect Rule
+
+Navigate to the Cloudflare dashboard and create a new redirect rule:
+
+![Redirect Rules in Cloudflare](https://cdn.srb.codes/images/blog/redirect-rules-cf.png)
+
+Configure the rule with these settings:
+
+**When incoming requests match...**
+
+- **Name**: `Redirect-X`
+- **Custom filter expression**
+  - **Field**: Hostname
+  - **Operator**: equals
+  - **Value**: `x.srb.codes`
+  - **Expression**: `(http.host eq "x.srb.codes")`
+
+**Then...**
+
+- **Type**: URL redirect (static)
+- **URL**: `https://x.com/intent/follow?screen_name=srbcode`
+- **Status code**: `301`
+
+Click **Save** to activate the rule.
+
+The final rule should look like this:
+
+![Redirect URL Preview](https://cdn.srb.codes/images/blog/redirect-url-preview.png)
+
+## References
+
+- [Cloudflare Docs: Create a redirect rule in the dashboard](https://developers.cloudflare.com/rules/url-forwarding/single-redirects/create-dashboard/)
