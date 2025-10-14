@@ -120,20 +120,6 @@ export function ViewOptions({
         })}`,
         icon: Icons.openai,
       },
-      {
-        title: "Open in Claude",
-        href: `https://claude.ai/new?${new URLSearchParams({
-          q,
-        })}`,
-        icon: Icons.claude,
-      },
-      {
-        title: "Open in Scira AI",
-        href: `https://scira.ai/?${new URLSearchParams({
-          q,
-        })}`,
-        icon: Icons.scira,
-      },
     ];
 
     if (isComponent) {
