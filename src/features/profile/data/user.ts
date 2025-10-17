@@ -21,7 +21,7 @@ export const USER: User = {
   jobTitle: "Engineer",
   jobs: [
     {
-      title: "Gen AI Engineer Trainee",
+      title: "Gen AI Engineer",
       company: "Datamonk",
       website: "https://learn.datamonk.dev",
     },

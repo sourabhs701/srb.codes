@@ -1,15 +1,15 @@
 import type { Certification } from "../types/certifications";
 
 export const CERTIFICATIONS: Certification[] = [
-  // {
-  //   title: "Next.js SEO Fundamentals",
-  //   issuer: "Vercel",
-  //   issuerIconName: "vercel",
-  //   issueDate: "2025-04-26",
-  //   credentialID: "seo-47463-1745634751873",
-  //   credentialURL:
-  //     "https://nextjs.org/learn/certificate?course=seo&user=47463&certId=seo-47463-1745634751873",
-  // },
+  {
+    title: "Next.js SEO Fundamentals",
+    issuer: "Vercel",
+    issuerIconName: "vercel",
+    issueDate: "2025-10-16",
+    credentialID: "seo-94844-1760682254468",
+    credentialURL:
+      "https://nextjs.org/learn/certificate?course=seo&user=94844&certId=seo-94844-1760682254468",
+  },
   // {
   //   title: "Next.js App Router Fundamentals",
   //   issuer: "Vercel",
